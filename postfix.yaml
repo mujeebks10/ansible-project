@@ -1,0 +1,52 @@
+---
+- name: installing web server
+  hosts: all
+  tasks:
+    - name: installing apache web server
+      yum:
+        name: http
+        state: latest
+
+    - name: start web server
+      service:
+        name: httpd
+        status: started
+
+    - name: check web site from web server
+      uri:
+        url: http://{{ ansible_fqdn }}
+        return_content: yes
+      register: example_webpage
+      failed_when: example_webpage.status != 200
+
+
+- name: installing web server
+  hosts: all
+  tasks:
+
+    - name: installing apache web server
+      yum: 
+        name: http
+        state: latest
+
+
+    - name: staring web server
+      service:
+        name: httpd
+        status: started
+    
+    - block:
+      - name: check web site from webserver
+        uri:
+          url: http://{{ ansible_fqdn }}
+          return_content: yes
+        register: example_webserver
+        failed_when: example_webserver.status != 200
+        
+      rescue:
+      - name: restart web server
+        service:
+          name: httpd
+            status: restarted
+
+        

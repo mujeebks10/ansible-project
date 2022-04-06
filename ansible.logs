@@ -1,0 +1,65 @@
+2022-04-04 15:53:23,825 p=7832 u=root n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: No JSON object could be decoded
+
+Syntax Error while loading YAML.
+  did not find expected '-' indicator
+
+The error appears to be in '/root/ansible/git-project/ansible-project/postfix.yaml': line 46, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+        rescue:
+        ^ here
+
+2022-04-04 15:54:18,819 p=7860 u=root n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: No JSON object could be decoded
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/root/ansible/git-project/ansible-project/postfix.yaml': line 48, column 19, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        - name: restart web server
+           service:
+                  ^ here
+
+2022-04-04 15:56:42,228 p=7982 u=root n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: No JSON object could be decoded
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/root/ansible/git-project/ansible-project/postfix.yaml': line 50, column 19, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+          name: httpd
+            status: restarted
+                  ^ here
+
+2022-04-04 15:57:48,925 p=8010 u=root n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: No JSON object could be decoded
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/root/ansible/git-project/ansible-project/postfix.yaml': line 50, column 19, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+          name: httpd
+            status: restarted
+                  ^ here
+
+2022-04-04 15:58:20,143 p=8037 u=root n=ansible | [WARNING]: module httpd not found in: /root/.ansible/plugins/modules:/usr/share
+/ansible/plugins/modules:/usr/lib/python2.7/site-packages/ansible/modules
+
+2022-04-04 18:00:20,640 p=9274 u=root n=ansible |  [ERROR]: User interrupted execution
+
